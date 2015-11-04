@@ -5,7 +5,11 @@ require 'pry'
 get '/:bottles' do
   bottles = params[:bottles].to_i
   next_bottles = bottles - 1
-  "<a href='/#{next_bottles}'>#{bottles} bottles of beer</a>"
+  if bottles == 0
+  	"No bottles of beer on the wall! <a href='/99'>Start over</a>?"
+  else
+  	"<a href='/#{next_bottles}'>#{bottles} bottles of beer</a>"
+  end
 end
 
 # binding.pry
