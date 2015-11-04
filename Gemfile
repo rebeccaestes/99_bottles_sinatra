@@ -1,2 +1,4 @@
-gem "sinatra"
-gem "sinatra-contrib"
+source 'https://www.rubygems.org'
+
+gem 'sinatra'
+gem 'sinatra-contrib'
